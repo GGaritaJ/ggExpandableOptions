@@ -1,0 +1,509 @@
+﻿
+/*////////////////////////////////////////////
+// ggMultiOptions Cell JS/CSS PlugIn V3.4   //
+// for HTML tables and DataTable PlugIn     //
+//  Developed by: Ing.Gerardo Garita J.     //
+//                FullStack Developer       //
+//  email:  info@ggaritaj.com               //
+//          gerardo.garita@ecomtrading.com  //
+//  date:       friday, 2016-05-06          //
+//  last date:  friday, 2016-09-23          //
+//              wednesday, 2018-07-04       //
+////////////////////////////////////////////*/
+
+.tableMenu{
+    position:relative;
+}
+.divMenu{
+    position:relative;
+}
+.tableMenu img{
+    position:absolute;
+    -webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	cursor: pointer;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
+	transition: transform 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
+}
+.tableMenu img.menu{
+    z-index:100;
+    left:75px;
+    opacity:1;
+    margin: 5px;
+}
+.divMenu img{
+    position:absolute;
+    -webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	cursor: pointer;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
+	transition: transform 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
+}
+.divMenu img.menu{
+    z-index:100;
+    opacity:1;
+    margin-left: -9px;
+    margin-top: -9px;
+    padding: 1px;
+    background: #fff;
+    border-radius: 25px;
+}
+.tableMenu img.menu.active,
+.divMenu img.menu.active{
+    opacity:0.8;
+    -webkit-transform: scale3d(0.8,0.8,1);
+	transform: scale3d(0.8,0.8,1);
+}
+div.menuConvert{
+    opacity:0;
+}
+.tableMenu img.menu.active + .menuConverted img{
+    z-index:1000;
+    height:32px;
+    width:32px;
+}
+.tableMenu img.menu.active + .menuConverted img:hover {
+	opacity: 0.9;
+    height:37px !important;
+    width:37px !important;
+}
+.tableMenu img.menu + .menuConverted img.option {
+	-webkit-transform: translate3d(90px, 15px, 0);
+	transform: translate3d(90px, 15px, 0);
+}
+div.divMenu img.menu.active + .menuConverted img.option{
+    z-index:110;
+}
+div.tableMenu.ten img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(88px, -48px, 0);
+	transform: translate3d(88px, -48px, 0);
+}
+div.tableMenu.ten img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(123px, -32px, 0);
+	transform: translate3d(123px, -32px, 0);
+}
+div.tableMenu.ten img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(148px, -3px, 0);
+	transform: translate3d(148px, -3px, 0);
+}
+div.tableMenu.ten img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(148px, 38px, 0);
+	transform: translate3d(148px, 38px, 0);
+}
+div.tableMenu.ten img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(123px, 68px, 0);
+	transform: translate3d(123px, 68px, 0);
+}
+div.tableMenu.ten img.menu.active + .menuConverted img.option:nth-child(6) {
+	-webkit-transform: translate3d(88px, 83px, 0);
+	transform: translate3d(88px, 83px, 0);
+}
+div.tableMenu.ten img.menu.active + .menuConverted img.option:nth-child(7) {
+	-webkit-transform: translate3d(53px, 68px, 0);
+	transform: translate3d(53px, 68px, 0);
+}
+div.tableMenu.ten img.menu.active + .menuConverted img.option:nth-child(8) {
+	-webkit-transform: translate3d(28px, 38px, 0);
+	transform: translate3d(28px, 38px, 0);
+}
+div.tableMenu.ten img.menu.active + .menuConverted img.option:nth-child(9) {
+	-webkit-transform: translate3d(28px, -3px, 0);
+	transform: translate3d(28px, -3px, 0);
+}
+div.tableMenu.ten img.menu.active + .menuConverted img.option:nth-child(10) {
+	-webkit-transform: translate3d(53px, -33px, 0);
+	transform: translate3d(53px, -33px, 0);
+}
+div.tableMenu.nine img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(88px, -45px, 0);
+	transform: translate3d(88px, -45px, 0);
+}
+div.tableMenu.nine img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(125px, -30px, 0);
+	transform: translate3d(125px, -30px, 0);
+}
+div.tableMenu.nine img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(145px, 5px, 0);
+	transform: translate3d(145px, 5px, 0);
+}
+div.tableMenu.nine img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(132px, 43px, 0);
+	transform: translate3d(132px, 43px, 0);
+}
+div.tableMenu.nine img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(108px, 70px, 0);
+	transform: translate3d(108px, 70px, 0);
+}
+div.tableMenu.nine img.menu.active + .menuConverted img.option:nth-child(6) {
+	-webkit-transform: translate3d(67px, 70px, 0);
+	transform: translate3d(67px, 70px, 0);
+}
+div.tableMenu.nine img.menu.active + .menuConverted img.option:nth-child(7) {
+	-webkit-transform: translate3d(42px, 43px, 0);
+	transform: translate3d(42px, 43px, 0);
+}
+div.tableMenu.nine img.menu.active + .menuConverted img.option:nth-child(8) {
+	-webkit-transform: translate3d(33px, 5px, 0);
+	transform: translate3d(33px, 5px, 0);
+}
+div.tableMenu.nine img.menu.active + .menuConverted img.option:nth-child(9) {
+	-webkit-transform: translate3d(53px, -30px, 0);
+	transform: translate3d(53px, -30px, 0);
+}
+div.tableMenu.eight img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(108px, -34px, 0);
+	transform: translate3d(108px, -34px, 0);
+}
+div.tableMenu.eight img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(135px, -2px, 0);
+	transform: translate3d(135px, -2px, 0);
+}
+div.tableMenu.eight img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(135px, 37px, 0);
+	transform: translate3d(135px, 37px, 0);
+}
+div.tableMenu.eight img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(108px, 65px, 0);
+	transform: translate3d(108px, 65px, 0);
+}
+div.tableMenu.eight img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(68px, 65px, 0);
+	transform: translate3d(68px, 65px, 0);
+}
+div.tableMenu.eight img.menu.active + .menuConverted img.option:nth-child(6) {
+	-webkit-transform: translate3d(40px, 37px, 0);
+	transform: translate3d(40px, 37px, 0);
+}
+div.tableMenu.eight img.menu.active + .menuConverted img.option:nth-child(7) {
+	-webkit-transform: translate3d(40px, -2px, 0);
+	transform: translate3d(40px, -2px, 0);
+}
+div.tableMenu.eight img.menu.active + .menuConverted img.option:nth-child(8) {
+	-webkit-transform: translate3d(68px, -34px, 0);
+	transform: translate3d(68px, -34px, 0);
+}
+div.tableMenu.seven img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(88px, -35px, 0);
+	transform: translate3d(88px, -35px, 0);
+}
+div.tableMenu.seven img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(123px, -15px, 0);
+	transform: translate3d(123px, -15px, 0);
+}
+div.tableMenu.seven img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(135px, 25px, 0);
+	transform: translate3d(135px, 25px, 0);
+}
+div.tableMenu.seven img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(110px, 57px, 0);
+	transform: translate3d(110px, 57px, 0);
+}
+div.tableMenu.seven img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(65px, 57px, 0);
+	transform: translate3d(65px, 57px, 0);
+}
+div.tableMenu.seven img.menu.active + .menuConverted img.option:nth-child(6) {
+	-webkit-transform: translate3d(40px, 25px, 0);
+	transform: translate3d(40px, 25px, 0);
+}
+div.tableMenu.seven img.menu.active + .menuConverted img.option:nth-child(7) {
+	-webkit-transform: translate3d(52px, -15px, 0);
+	transform: translate3d(52px, -15px, 0);
+}
+div.tableMenu.six img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(88px, -35px, 0);
+	transform: translate3d(88px, -35px, 0);
+}
+div.tableMenu.six img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(130px, -10px, 0);
+	transform: translate3d(130px, -10px, 0);
+}
+div.tableMenu.six img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(130px, 35px, 0);
+	transform: translate3d(130px, 35px, 0);
+}
+div.tableMenu.six img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(88px, 60px, 0);
+	transform: translate3d(88px, 60px, 0);
+}
+div.tableMenu.six img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(45px, 35px, 0);
+	transform: translate3d(45px, 35px, 0);
+}
+div.tableMenu.six img.menu.active + .menuConverted img.option:nth-child(6) {
+	-webkit-transform: translate3d(45px, -10px, 0);
+	transform: translate3d(45px, -10px, 0);
+}
+div.tableMenu.five img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(88px, -35px, 0);
+	transform: translate3d(88px, -35px, 0);
+}
+div.tableMenu.five img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(132px, -2px, 0);
+	transform: translate3d(132px, -2px, 0);
+}
+div.tableMenu.five img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(120px, 48px, 0);
+	transform: translate3d(120px, 48px, 0);
+}
+div.tableMenu.five img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(55px, 48px, 0);
+	transform: translate3d(55px, 48px, 0);
+}
+div.tableMenu.five img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(44px, -2px, 0);
+	transform: translate3d(44px, -2px, 0);
+}
+div.tableMenu.four img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(120px, -18px, 0);
+	transform: translate3d(120px, -18px, 0);
+}
+div.tableMenu.four img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(120px, 45px, 0);
+	transform: translate3d(120px, 45px, 0);
+}
+div.tableMenu.four img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(55px, 45px, 0);
+	transform: translate3d(55px, 45px, 0);
+}
+div.tableMenu.four img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(55px, -18px, 0);
+	transform: translate3d(55px, -18px, 0);
+}
+div.tableMenu.three img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(88px, -30px, 0);
+	transform: translate3d(88px, -30px, 0);
+}
+div.tableMenu.three img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(124px, 40px, 0);
+	transform: translate3d(124px, 40px, 0);
+}
+div.tableMenu.three img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(50px, 40px, 0);
+	transform: translate3d(50px, 40px, 0);
+}
+div.tableMenu.two img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(45px, 13px, 0);
+	transform: translate3d(45px, 13px, 0);
+}
+div.tableMenu.two img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(130px, 13px, 0);
+	transform: translate3d(130px, 13px, 0);
+}
+
+div.divMenu.ten img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(0px, -66px, 0);
+	transform: translate3d(0px, -66px, 0);
+}
+div.divMenu.ten img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(35px, -50px, 0);
+	transform: translate3d(35px, -50px, 0);
+}
+div.divMenu.ten img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(60px, -21px, 0);
+	transform: translate3d(60px, -21px, 0);
+}
+div.divMenu.ten img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(60px, 20px, 0);
+	transform: translate3d(60px, 20px, 0);
+}
+div.divMenu.ten img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(35px, 50px, 0);
+	transform: translate3d(35px, 50px, 0);
+}
+div.divMenu.ten img.menu.active + .menuConverted img.option:nth-child(6) {
+	-webkit-transform: translate3d(0px, 65px, 0);
+	transform: translate3d(0px, 65px, 0);
+}
+div.divMenu.ten img.menu.active + .menuConverted img.option:nth-child(7) {
+	-webkit-transform: translate3d(-35px, 50px, 0);
+	transform: translate3d(-35px, 50px, 0);
+}
+div.divMenu.ten img.menu.active + .menuConverted img.option:nth-child(8) {
+	-webkit-transform: translate3d(-60px, 20px, 0);
+	transform: translate3d(-60px, 20px, 0);
+}
+div.divMenu.ten img.menu.active + .menuConverted img.option:nth-child(9) {
+	-webkit-transform: translate3d(-60px, -21px, 0);
+	transform: translate3d(-60px, -21px, 0);
+}
+div.divMenu.ten img.menu.active + .menuConverted img.option:nth-child(10) {
+	-webkit-transform: translate3d(-35px, -51px, 0);
+	transform: translate3d(-35px, -51px, 0);
+}
+div.divMenu.nine img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(0px, -55px, 0);
+	transform: translate3d(0px, -55px, 0);
+}
+div.divMenu.nine img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(35px, -40px, 0);
+	transform: translate3d(35px, -40px, 0);
+}
+div.divMenu.nine img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(55px, -5px, 0);
+	transform: translate3d(55px, -5px, 0);
+}
+div.divMenu.nine img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(45px, 32px, 0);
+	transform: translate3d(45px, 32px, 0);
+}
+div.divMenu.nine img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(20px, 55px, 0);
+	transform: translate3d(20px, 55px, 0);
+}
+div.divMenu.nine img.menu.active + .menuConverted img.option:nth-child(6) {
+	-webkit-transform: translate3d(-20px, 55px, 0);
+	transform: translate3d(-20px, 55px, 0);
+}
+div.divMenu.nine img.menu.active + .menuConverted img.option:nth-child(7) {
+	-webkit-transform: translate3d(-45px, 32px, 0);
+	transform: translate3d(-45px, 32px, 0);
+}
+div.divMenu.nine img.menu.active + .menuConverted img.option:nth-child(8) {
+	-webkit-transform: translate3d(-55px, -5px, 0);
+	transform: translate3d(-55px, -5px, 0);
+}
+div.divMenu.nine img.menu.active + .menuConverted img.option:nth-child(9) {
+	-webkit-transform: translate3d(-35px, -40px, 0);
+	transform: translate3d(-35px, -40px, 0);
+}
+div.divMenu.eight img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(23px, -45px, 0);
+	transform: translate3d(23px, -45px, 0);
+}
+div.divMenu.eight img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(50px, -20px, 0);
+	transform: translate3d(50px, -20px, 0);
+}
+div.divMenu.eight img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(50px, 20px, 0);
+	transform: translate3d(50px, 20px, 0);
+}
+div.divMenu.eight img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(23px, 45px, 0);
+	transform: translate3d(23px, 45px, 0);
+}
+div.divMenu.eight img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(-23px, 45px, 0);
+	transform: translate3d(-23px, 45px, 0);
+}
+div.divMenu.eight img.menu.active + .menuConverted img.option:nth-child(6) {
+	-webkit-transform: translate3d(-50px, 20px, 0);
+	transform: translate3d(-50px, 20px, 0);
+}
+div.divMenu.eight img.menu.active + .menuConverted img.option:nth-child(7) {
+	-webkit-transform: translate3d(-50px, -20px, 0);
+	transform: translate3d(-50px, -20px, 0);
+}
+div.divMenu.eight img.menu.active + .menuConverted img.option:nth-child(8) {
+	-webkit-transform: translate3d(-23px, -45px, 0);
+	transform: translate3d(-23px, -45px, 0);
+}
+div.divMenu.seven img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(0px, -50px, 0);
+	transform: translate3d(0px, -50px, 0);
+}
+div.divMenu.seven img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(40px, -30px, 0);
+	transform: translate3d(40px, -30px, 0);
+}
+div.divMenu.seven img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(45px, 10px, 0);
+	transform: translate3d(45px, 10px, 0);
+}
+div.divMenu.seven img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(25px, 45px, 0);
+	transform: translate3d(25px, 45px, 0);
+}
+div.divMenu.seven img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(-25px, 45px, 0);
+	transform: translate3d(-25px, 45px, 0);
+}
+div.divMenu.seven img.menu.active + .menuConverted img.option:nth-child(6) {
+	-webkit-transform: translate3d(-45px, 10px, 0);
+	transform: translate3d(-45px, 10px, 0);
+}
+div.divMenu.seven img.menu.active + .menuConverted img.option:nth-child(7) {
+	-webkit-transform: translate3d(-40px, -30px, 0);
+	transform: translate3d(-40px, -30px, 0);
+}
+div.divMenu.six img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(0px, -50px, 0);
+	transform: translate3d(0px, -50px, 0);
+}
+div.divMenu.six img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(45px, -20px, 0);
+	transform: translate3d(45px, -20px, 0);
+}
+div.divMenu.six img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(45px, 25px, 0);
+	transform: translate3d(45px, 25px, 0);
+}
+div.divMenu.six img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(0px, 50px, 0);
+	transform: translate3d(0px, 50px, 0);
+}
+div.divMenu.six img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(-45px, 25px, 0);
+	transform: translate3d(-45px, 25px, 0);
+}
+div.divMenu.six img.menu.active + .menuConverted img.option:nth-child(6) {
+	-webkit-transform: translate3d(-45px, -20px, 0);
+	transform: translate3d(-45px, -20px, 0);
+}
+div.divMenu.five img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(0px, -50px, 0);
+	transform: translate3d(0px, -50px, 0);
+}
+div.divMenu.five img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(50px, -20px, 0);
+	transform: translate3d(50px, -20px, 0);
+}
+div.divMenu.five img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(35px, 40px, 0);
+	transform: translate3d(35px, 40px, 0);
+}
+div.divMenu.five img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(-35px, 40px, 0);
+	transform: translate3d(-35px, 40px, 0);
+}
+div.divMenu.five img.menu.active + .menuConverted img.option:nth-child(5) {
+	-webkit-transform: translate3d(-50px, -20px, 0);
+	transform: translate3d(-50px, -20px, 0);
+}
+div.divMenu.four img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(40px, -35px, 0);
+	transform: translate3d(40px, -35px, 0);
+}
+div.divMenu.four img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(40px, 35px, 0);
+	transform: translate3d(40px, 35px, 0);
+}
+div.divMenu.four img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(-40px, 35px, 0);
+	transform: translate3d(-40px, 35px, 0);
+}
+div.divMenu.four img.menu.active + .menuConverted img.option:nth-child(4) {
+	-webkit-transform: translate3d(-40px, -35px, 0);
+	transform: translate3d(-40px, -35px, 0);
+}
+div.divMenu.three img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(0px, -50px, 0);
+	transform: translate3d(0px, -50px, 0);
+}
+div.divMenu.three img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(45px, 25px, 0);
+	transform: translate3d(45px, 25px, 0);
+}
+div.divMenu.three img.menu.active + .menuConverted img.option:nth-child(3) {
+	-webkit-transform: translate3d(-45px, 25px, 0);
+	transform: translate3d(-45px, 25px, 0);
+}
+div.divMenu.two img.menu.active + .menuConverted img.option:nth-child(1) {
+	-webkit-transform: translate3d(-55px, 1px, 0);
+	transform: translate3d(-55px, 1px, 0);
+}
+div.divMenu.two img.menu.active + .menuConverted img.option:nth-child(2) {
+	-webkit-transform: translate3d(55px, 1px, 0);
+	transform: translate3d(55px, 1px, 0);
+}
