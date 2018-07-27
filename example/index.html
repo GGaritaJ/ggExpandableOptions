@@ -4,31 +4,50 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="SMSIntegrity" />
-    <meta name="author" content="ECOM Agroindustrial Corporation" />
+    <meta name="description" content="Expandable Options jQuery plugin" />
+    <meta name="author" content="GGaritaJ Gerardo Garita" />
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self'; style-src 'self' http://fonts.googleapis.com/css; img-src 'self'; frame-src 'self'; child-src 'self'; form-action 'self'; connect-src 'self'; object-src 'self'; media-src 'self'" />
-    <meta http-equiv="X-Frame-Options" content="'SAMEORIGIN'">
     <meta http-equiv="X-Xss-Protection" content="'1; mode=block' always">
     <meta http-equiv="X-Content-Type-Options" content="'nosniff' always">
-    <title>Mi pagina web</title>
+    <title>Expandable Options jQuery plugin</title>
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/expandableOptions.css" rel="stylesheet" />
+    <link href="css/myStyle.css" rel="stylesheet" />
 </head>
 <body>
 
-    <!-- CONTENEDOR PRINCIPAL : INICIO -->
     <div id="mainContainer">
-        <!-- AGREGAR SENTENCIAS SOLO ACA -->
-        <button type="button" class="btn btn-primary">Aceptar</button>
-        <span class="glyphicon glyphicon-bell"></span>
+
+        <!-- OPTIONS : START -->
+        <div class="expandableOptions">
+            <ul id="optionsOneId" class="expandableOptions">
+                <li class="option" onclick="console.log('option 1 clicked');" title="option 1" option-image="img/one.png"></li>
+                <li class="option" onclick="console.log('option 2 clicked');" title="option 2" option-image="img/two.png"></li>
+                <li class="option" onclick="console.log('option 3 clicked');" title="option 3" option-image="img/three.png"></li>
+                <li class="option" onclick="console.log('option 4 clicked');" title="option 4" option-image="img/four.png"></li>
+                <li class="option" onclick="console.log('option 5 clicked');" title="option 5" option-image="img/five.png"></li>
+            </ul>
+        </div>
+
+        <div class="expandableOptions">
+            <ul id="optionsTwoId" class="expandableOptions">
+                <li class="option" onclick="console.log('option 6 clicked');" title="option 6" option-image="img/six.png"></li>
+                <li class="option" onclick="console.log('option 7 clicked');" title="option 7" option-image="img/seven.png"></li>
+                <li class="option" onclick="console.log('option 8 clicked');" title="option 8" option-image="img/eight.png"></li>
+                <li class="option" onclick="console.log('option 9 clicked');" title="option 9" option-image="img/nine.png"></li>
+                <li class="option" onclick="console.log('option 10 clicked');" title="option 10" option-image="img/ten.png"></li>
+            </ul>
+        </div>
+        <!-- OPTIONS : ENDS -->
+
     </div>
-    <!-- CONTENEDOR PRINCIPAL : FIN -->
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/myscript.js"></script>
+    <script src="js/expandableOptions.js"></script>
+    <script src="js/myScript.js"></script>
+
 </body>
 </html>

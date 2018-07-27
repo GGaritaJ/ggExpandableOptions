@@ -1,39 +1,26 @@
-﻿//////////////////////////////////////////////
-// ggMultiOptions Cell JS/CSS PlugIn V3.4   //
-// for HTML tables and DataTable PlugIn     //
-//  Developed by: Ing.Gerardo Garita J.     //
-//                FullStack Developer       //
-//  email:  info@ggaritaj.com               //
-//          gerardo.garita@ecomtrading.com  //
-//  date:       friday, 2016-05-06          //
-//  last date:  friday, 2016-09-23          //
-//              monday, 2017-02-13          //
-//              wednesday, 2017-06-07       //
-//              wednesday, 2018-07-04       //
-//////////////////////////////////////////////
+﻿///////////////////////////////////////////////
+// ggExpandableOptions Cell JS/CSS PlugIn V4 //
+//  Developed by: Ing.Gerardo Garita J.      //
+//                FullStack Developer        //
+//  email:  info@ggaritaj.com                //
+//          gerardo.garita@ecomtrading.com   //
+//  date:       friday, 2018-07-27           //
+//  last date:  friday, 2018-07-27           //
+///////////////////////////////////////////////
 
 var ggcontainer = "";
 var isTable = true;
-var pathLevels = "";
-var browser = "";
 var iterations = 0;
 var timeOutNoReady;
 var myEvent;
-function menuConvert(containerId, urlPath, isHTMLTable) { // Main call
+function menuConvert(containerId) {
     ggcontainer = containerId;
-    isTable = isHTMLTable;
-    pathLevels = getPathLevels(urlPath);
-    browser = getBrowserDetails();
     iterations = 0;
+    isTable = true;
     this.clearTimeOut();
     this.clearContainer(isTable);
     this.testExist(isTable);
     this.addBasicEvents();
-    if (isTable) {
-        setTimeout(function () {
-            addPlugInEvents(true);
-        }, 2000);
-    }
 };
 function clearTimeOut() {
     clearTimeout(timeOutNoReady);
@@ -93,7 +80,7 @@ function init() {
         var childs = this.children;
         var parent = this.parentElement;
         $(parent).addClass((getNumberClass($(childs).length)));
-        var options = "<img class='menu' src='./" + pathLevels + "Images/tablesMenu/settings64.png' alt='menu' height='50' width='50' ><div class='menuConverted'>";
+        var options = "<img class='menu' src='./Images/tablesMenu/settings64.png' alt='menu' height='50' width='50' ><div class='menuConverted'>";
         $(childs).each(function () {
             var instedEvent = "";
             var title = "";
@@ -110,7 +97,7 @@ function init() {
                 title = this.attributes[1].nodeValue;
                 instedEvent = this.attributes[2].nodeValue;
             }
-            options = options + "<img class='option' src='./" + pathLevels + "Images/tablesMenu/" + (this.text) + ".png' onclick=" + instedEvent + " title='" + title + "' />";
+            options = options + "<img class='option' src='./Images/tablesMenu/" + (this.text) + ".png' onclick=" + instedEvent + " title='" + title + "' />";
         });
         options = options + "</div>";
         $(options).appendTo($(parent));
@@ -178,55 +165,6 @@ function addBasicEvents() {
         }
     });
 };
-function addPlugInEvents(istable) {
-    $("div.dataTables_length select.form-control").on('change', function (event) {
-        clearContainer(istable);
-        prepareContainer(istable);
-        init();
-        addPlugInEvents(istable);
-    });
-    $("div.dataTables_paginate ul li.paginate_button").on('click', function () {
-        clearContainer(istable);
-        prepareContainer(istable);
-        init();
-        addPlugInEvents(istable);
-    });
-    $("div.dataTables_filter label input").unbind("keypress").on('keypress', function () {
-        clearContainer(istable);
-        prepareContainer(istable);
-        init();
-        addPlugInEvents(istable);
-    });
-    $("div.dataTables_filter label input").unbind("keyup").on('keyup', function () {
-        clearContainer(istable);
-        prepareContainer(istable);
-        init();
-        addPlugInEvents(istable);
-    });
-    $("#filtersInDT th select").on('change', function (event) {
-        clearContainer(istable);
-        prepareContainer(istable);
-        init();
-        addPlugInEvents(istable);
-    });
-    $("#filtersInDT th input, #filtersInDT th textarea").unbind("keypress").on('keypress', function () {
-        clearContainer(istable);
-        prepareContainer(istable);
-        init();
-        addPlugInEvents(istable);
-    });
-    $("th.sorting, th.sorting_asc, th.sorting_desc").on('click', function (event) {
-        if (myEvent != event) {
-            myEvent = event;
-            setTimeout(function () {
-                clearContainer(true);
-                prepareContainer(true);
-                init();
-                addPlugInEvents(true);
-            }, 200);
-        }
-    });
-};
 
 // HTML Structure Example: 
 //
@@ -248,12 +186,10 @@ function addPlugInEvents(istable) {
 //      </div>
 //  </div>
 //
-//  <div id="divsName">
-//      <div class="divMenu">
-//          <div class='menuConvert'>
-//              <a href='#' title='' onclick='alert()'>edit</a>
-//              <a href='#' title='' onclick='alert()'>delete</a>
-//              <a href='#' title='' onclick='alert()'>comments</a>
-//          </div>
+//  <div class="divMenu">
+//      <div class='menuConvert'>
+//          <a href='#' title='' onclick='alert()'>edit</a>
+//          <a href='#' title='' onclick='alert()'>delete</a>
+//          <a href='#' title='' onclick='alert()'>comments</a>
 //      </div>
 //  </div>
