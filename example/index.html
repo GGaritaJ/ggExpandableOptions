@@ -21,24 +21,50 @@
     <div id="mainContainer">
 
         <!-- OPTIONS : START -->
-        <div class="expandableOptions">
-            <ul id="optionsOneId" class="expandableOptions">
-                <li class="option" onclick="console.log('option 1 clicked');" title="option 1" option-image="img/one.png"></li>
-                <li class="option" onclick="console.log('option 2 clicked');" title="option 2" option-image="img/two.png"></li>
-                <li class="option" onclick="console.log('option 3 clicked');" title="option 3" option-image="img/three.png"></li>
-                <li class="option" onclick="console.log('option 4 clicked');" title="option 4" option-image="img/four.png"></li>
-                <li class="option" onclick="console.log('option 5 clicked');" title="option 5" option-image="img/five.png"></li>
-            </ul>
-        </div>
-
-        <div class="expandableOptions">
-            <ul id="optionsTwoId" class="expandableOptions">
-                <li class="option" onclick="console.log('option 6 clicked');" title="option 6" option-image="img/six.png"></li>
-                <li class="option" onclick="console.log('option 7 clicked');" title="option 7" option-image="img/seven.png"></li>
-                <li class="option" onclick="console.log('option 8 clicked');" title="option 8" option-image="img/eight.png"></li>
-                <li class="option" onclick="console.log('option 9 clicked');" title="option 9" option-image="img/nine.png"></li>
-                <li class="option" onclick="console.log('option 10 clicked');" title="option 10" option-image="img/ten.png"></li>
-            </ul>
+        <table class="table table-bordered table-condensed table-striped table-responsive">
+            <thead>
+                <tr>
+                    <td>FIELD 1</td>
+                    <td>FIELD 2</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="expandableContainer">
+                            <ul id="optionsOneId" class="expandableOptions">
+                                <li class="option" onclick="alert('option 1 clicked');" title="option 1" option-image="one.png"></li>
+                                <li class="option" onclick="alert('option 2 clicked');" title="option 2" option-image="two.png"></li>
+                                <li class="option" onclick="alert('option 3 clicked');" title="option 3" option-image="three.png"></li>
+                                <li class="option" onclick="alert('option 4 clicked');" title="option 4" option-image="four.png"></li>
+                                <li class="option" onclick="alert('option 5 clicked');" title="option 5" option-image="five.png"></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="expandableContainer">
+                            <ul id="optionsTwoId" class="expandableOptions">
+                                <li class="option" onclick="alert('option 6 clicked');" title="option 6" option-image="six.png"></li>
+                                <li class="option" onclick="alert('option 7 clicked');" title="option 7" option-image="seven.png"></li>
+                                <li class="option" onclick="alert('option 8 clicked');" title="option 8" option-image="eight.png"></li>
+                                <li class="option" onclick="alert('option 9 clicked');" title="option 9" option-image="nine.png"></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <div class="expandableContainer">
+                <ul id="optionsThreeId" class="expandableOptions">
+                    <li class="option" onclick="alert('option 1 clicked');" title="option 1" option-image="one.png"></li>
+                    <li class="option" onclick="alert('option 2 clicked');" title="option 2" option-image="two.png"></li>
+                    <li class="option" onclick="alert('option 3 clicked');" title="option 3" option-image="three.png"></li>
+                    <li class="option" onclick="alert('option 4 clicked');" title="option 4" option-image="four.png"></li>
+                    <li class="option" onclick="alert('option 5 clicked');" title="option 5" option-image="five.png"></li>
+                    <li class="option" onclick="alert('option 6 clicked');" title="option 6" option-image="six.png"></li>
+                </ul>
+            </div>
         </div>
         <!-- OPTIONS : ENDS -->
 

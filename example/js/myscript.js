@@ -1,4 +1,10 @@
 $(document).ready(function () {
-    //$("#optionsOneId").ggExpandable("#optionsOneId");
-    $(".expandableOptions").ggExpandable(".expandableOptions");
+    //$("#optionsOneId").ggExpandable({
+    //    imagesPath: "./img/",
+    //    expandImage: "expand.png"
+    //});
+    $(".expandableOptions").ggExpandable({
+        imagesPath: "./img/",
+        expandImage: "expand.png"
+    });
 });

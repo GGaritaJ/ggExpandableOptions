@@ -9,3 +9,12 @@
 #mainContainer {
     padding:20px;
 }
+#mainContainer table tbody tr td {
+    min-height: 70px;
+    height: 70px;
+    width: 150px;
+    min-width: 150px;
+}
+.expandableContainer {
+    margin: 15px 45%;
+}
