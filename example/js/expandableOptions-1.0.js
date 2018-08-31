@@ -1,5 +1,5 @@
 ﻿///////////////////////////////////////////////
-// ggExpandableOptions Cell JS/CSS PlugIn V4 //
+// ggExpandableOptions JS/CSS PlugIn V1.0    //
 //  Developed by: Ing.Gerardo Garita J.      //
 //                FullStack Developer        //
 //  email:  info@ggaritaj.com                //
