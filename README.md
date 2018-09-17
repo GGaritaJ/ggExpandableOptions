@@ -5,4 +5,11 @@ jQuery plugin ggExpandable v1.0
 
 Plugin based on jquery that allows the handling of many options (ex: list, add, edit, delete) from a only option, and fire different actions on the websites.
 
+Usage:
+```javascript
+$(".expandableOptions").ggExpandable({
+    imagesPath: "./img/",
+    expandImage: "expand.png"
+});
+```
 More info: www.ggaritaj.com info@ggaritaj.com
