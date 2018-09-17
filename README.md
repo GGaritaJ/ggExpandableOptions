@@ -8,8 +8,8 @@ Plugin based on jquery that allows the handling of many options (ex: list, add, 
 Usage:
 ```javascript
 $(".expandableOptions").ggExpandable({
-    imagesPath: "./img/",
-    expandImage: "expand.png"
+    imagesPath: "./img/",//images path
+    expandImage: "expand.png"//expandable button image
 });
 ```
 More info: www.ggaritaj.com info@ggaritaj.com
