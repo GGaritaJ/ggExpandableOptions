@@ -8,7 +8,6 @@
 ///////////////////////////////////////////////
 
 ; (function ($) {
-    var classExpandable;
     jQuery.fn.ggExpandable = function (options) {
         try {
             var path = "./";
