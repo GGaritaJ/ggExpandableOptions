@@ -12,4 +12,7 @@ $(".expandableOptions").ggExpandable({
     expandImage: "expand.png"//expandable button image
 });
 ```
+
+Online example: https://www.jqueryscript.net/demo/Radial-Popup-Menu-ggExpandableOptions/
+
 More info: www.ggaritaj.com info@ggaritaj.com
